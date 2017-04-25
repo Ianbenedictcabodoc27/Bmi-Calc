@@ -1,0 +1,23 @@
+[[!JsonFormBuilder-fromJSON? &json=`
+ 
+{
+    "id": "TestContactForm",
+    "redirectDocument": "3",
+    "jqueryValidation":true,
+    "placeholderJavascript":"JsonFormBuilder_myForm",
+ 
+    "emailToAddress": "[[++emailsender]]",
+    "emailFromAddress": "[[+postVal.email_address]]",
+    "emailFromName": "[[+postVal.name_full]]",
+    "emailSubject": "JsonFormBuilder Contact Form Submission",
+    "emailHeadHtml": "<p>This is a response from the contact us form:</p>",
+     
+    "elements": [
+        {"element":"text", "id":"name_full", "label":"Name", "extraClasses":["half"], "extraElementAttribs":{"placeholder":"Enter your name","class":"custom-class"}, "rules":["required"] },
+        {"element":"text", "id":"email_address", "label":"Email Address", "extraClasses":["half"], "extraElementAttribs":{"placeholder":"Enter your email","class":"custom-class"}, "rules":["required","email"] },
+        {"element":"textArea", "id":"notes", "label":"Comments", "rows":5, "columns":30, "rules":["required"]},
+        {"element":"button", "id":"submit", "label":"Submit From", "type":"Submit"}
+    ]
+}
+ 
+`]]

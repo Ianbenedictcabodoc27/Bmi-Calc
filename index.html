@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link href="assets/css/blog.css" rel="stylesheet">
+	<script src="assets/js/ie-emulation-modes-warning.js"></script>
+	</head>
+
+	
+<title>BMI Calculator</title>
+<script>
+var limit="00:04"
+if (document.images){
+var parselimit=limit.split(":")
+parselimit=parselimit[0]*60+parselimit[1]*1
+}
+function begintimer(){
+if (!document.images)
+return
+if (parselimit==1)
+window.location="bmi3.html"
+else{ 
+parselimit-=1
+curmin=Math.floor(parselimit/60)
+cursec=parselimit%60
+if (curmin!=0)
+curtime=curmin+" minutes and "+cursec+" seconds left"
+else
+curtime=cursec+" seconds left"
+window.status=curtime
+setTimeout("begintimer()",1000)
+}
+}
+
+</script>
+
+<body style = "background-color:#252362" onLoad="begintimer()">
+
+<div class = "container">
+ </br></br></br>
+ 
+<center><img src="front.jpg" width="400" height="600" class="img-responsive" alt="Generic placeholder thumbnail"></center>
+ </body>
+ </br></br>
+ <!--<footer class="blog-footer">
+      <p>&copy; 2017 BMI Calculator Monochromatech</p>
+    </footer>-->
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.bmicalculator.monochromatech"  version = "1.0.0">
+
+	<name>BMI Calculator</name>
+    <description>The BMI Calculator Application was created by Wireless Application Students of St. Benilde Center for Global Competence Inc. Olongapo.</description>
+    <author>Monochromatech</author>
+	
+	<gap:platforms>
+		<gap:platform name="android" />
+	</gap:platforms>
+	
+	<icon src="title.png" gap:role="default" />
+		
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	
+	<gap:plugin name="cordova-plugin-file" source="npm" />
+	<gap:plugin name="cordova-plugin-media" source="npm" />
+		
+	<preference name="phonegap-version" value="cli-6.3.0" />
+	<preference name="fullscreen" value="true" />
+	
+	<preference name="android-minSdkVersion" value="14" />
+</widget>
